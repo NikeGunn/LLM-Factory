@@ -1,4 +1,4 @@
-from llm_factory.data_loader.dataset_loader import load_and_prepare_dataset
+from src.data_loader.dataset_loader import load_and_prepare_dataset
 from transformers import AutoTokenizer
 
 def test_data_loading():

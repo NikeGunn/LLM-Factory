@@ -1,7 +1,23 @@
 [build-system]
-requires = ["setuptools>=42"]
+requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
+[project]
+name = "llm_factory"
+version = "0.1.0"
+dependencies = [
+    "torch>=2.0.1",
+    "transformers>=4.31.0",
+    "datasets>=2.14.0"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-cov"
+]
+
 [tool.pytest.ini_options]
-pythonpath = ["src"]
+pythonpath = ["."]
 testpaths = ["tests"]
+addopts = "-v --cov=src --cov-report=xml"
