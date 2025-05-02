@@ -29,3 +29,6 @@ jobs:
     - name: Run tests
       run: |
         pytest tests/ -v
+
+    - name: Test in Docker
+      run: docker build -f Dockerfile.ci -t llm-factory-ci . && docker run llm-factory-ci
