@@ -1,0 +1,9 @@
+name: Deploy API
+on: push
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: bash scripts/setup_env.sh
+      - run: bash scripts/deploy_api.sh

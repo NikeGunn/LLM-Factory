@@ -1,0 +1,8 @@
+model_name: "mistralai/Mistral-7B-v0.1"
+dataset_path: "data/processed/code_dataset"
+lora_rank: 8
+lora_alpha: 32
+target_modules: ["q_proj", "v_proj"]
+batch_size: 4
+epochs: 3
+learning_rate: 2e-5

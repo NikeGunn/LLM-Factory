@@ -1,0 +1,3 @@
+quantization: "4bit"
+flash_attention: true
+device_map: "auto"
